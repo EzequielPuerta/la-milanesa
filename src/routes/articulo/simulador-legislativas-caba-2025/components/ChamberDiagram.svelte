@@ -123,26 +123,26 @@
 
     <div class="flex justify-center gap-4 text-center">
         {#if showCounters}
-            <div class="flex flex-col items-center mt-3">
-                <p class="px-0 text-sm font-medium text-gray-500">Votos afirmativos</p>
-                <p class="px-0 text-2xl font-semibold text-gray-700">{affirmativeVotes.toFixed(0)}%</p>
+            <div class="flex flex-col items-center mt-1 md:mt-3">
+                <p class="px-0 text-xs md:text-sm font-medium text-gray-500">Votos afirmativos</p>
+                <p class="px-0 text-md md:text-2xl font-semibold text-gray-700">{affirmativeVotes.toFixed(0)}%</p>
             </div>
-            <div class="flex flex-col items-center mt-3">
-                <p class="px-0 text-sm font-medium text-gray-500">Votos disponibles</p>
-                <p class="px-0 text-2xl font-semibold text-gray-700">{availableVoters.toLocaleString()}</p>
+            <div class="flex flex-col items-center mt-1 md:mt-3">
+                <p class="px-0 text-xs md:text-sm font-medium text-gray-500">Votos disponibles</p>
+                <p class="px-0 text-md md:text-2xl font-semibold text-gray-700">{availableVoters.toLocaleString()}</p>
             </div>
-            <div class="flex flex-col items-center mt-3">
-                <p class="px-0 text-sm font-medium text-gray-500">Ventaja Oficialista</p>
-                <p class="px-0 text-2xl font-semibold text-gray-700">{governmentAdvantage > 0 ? '+' : ''}{governmentAdvantage}</p>
+            <div class="flex flex-col items-center mt-1 md:mt-3">
+                <p class="px-0 text-xs md:text-sm font-medium text-gray-500">Ventaja Oficialista</p>
+                <p class="px-0 text-md md:text-2xl font-semibold text-gray-700">{governmentAdvantage > 0 ? '+' : ''}{governmentAdvantage}</p>
             </div>
-            <div class="flex flex-col items-center mt-3">
-                <p class="px-0 text-sm font-medium text-gray-500">Umbral D’Hondt</p>
-                <p class="px-0 text-2xl font-semibold text-gray-700">{thresholdDhondt.toLocaleString()}</p>
+            <div class="flex flex-col items-center mt-1 md:mt-3">
+                <p class="px-0 text-xs md:text-sm font-medium text-gray-500">Umbral D’Hondt</p>
+                <p class="px-0 text-md md:text-2xl font-semibold text-gray-700">{thresholdDhondt.toLocaleString()}</p>
             </div>
         {/if}
     </div>
 
-    <div class="mt-6 w-full max-w-[600px]">
+    <div class="mt-2 md:mt-6 w-full max-w-[600px]">
         <div class="flex flex-wrap justify-center gap-4 sm:gap-10">
             <div class="flex flex-col items-start">
                 {#if groupedResults['Oficialismo']}

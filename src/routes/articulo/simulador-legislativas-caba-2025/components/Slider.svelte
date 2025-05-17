@@ -32,8 +32,8 @@
     }
 </script>
   
-<div class="w-50 md:w-45 flex flex-col gap-2">
-    <div class="font-semibold text-sm" style="color: {asNeutral ? darkenColor(data.color, 0.3) : data.color}">
+<div class="w-50 md:w-45 flex flex-col gap-0.5 md:gap-2">
+    <div class="font-semibold text-xs md:text-sm" style="color: {asNeutral ? darkenColor(data.color, 0.3) : data.color}">
         {#if data.name !== BLANK_VOTE_NAME && data.name !== NULL_VOTE_NAME}
             {rank}°) {data.name} {(rank === 1) && (data.percentage > 0) ? '🎉' : ''}
         {:else}
@@ -52,7 +52,7 @@
             max={maxAllowed}
             value={data.percentage}
             on:input={handleInput}
-            class="range range-vertical h-[20px] range-error touch-none"
+            class="range range-vertical h-[15px] md:h-[20px] range-error touch-none"
             style="color: {asNeutral ? darkenColor(data.color) : data.color}"
         />
     </div>
