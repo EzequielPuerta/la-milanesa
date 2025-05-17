@@ -32,7 +32,7 @@
     }
 </script>
   
-<div class="w-60 md:w-45 flex flex-col gap-2">
+<div class="w-50 md:w-45 flex flex-col gap-2">
     <div class="font-semibold text-sm" style="color: {asNeutral ? darkenColor(data.color, 0.3) : data.color}">
         {#if data.name !== BLANK_VOTE_NAME && data.name !== NULL_VOTE_NAME}
             {rank}°) {data.name} {(rank === 1) && (data.percentage > 0) ? '🎉' : ''}
