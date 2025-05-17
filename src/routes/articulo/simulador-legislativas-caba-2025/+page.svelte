@@ -78,6 +78,10 @@
 </script>
 
 <p class="px-10 pt-16 pb-4">
+    <em>Disclaimer:</em> Si bien el presente artículo está pensado <em>mobile first</em> y deberías poder ver su contenido sin problemas, la magnitud y complejidad de los diagramas hacen que se aprecie mucho mejor en pantallas de mayor tamaño. Dicho esto, si estas desde un celular, tu paciencia será apreciada 😁.
+</p>
+
+<p class="px-10 pt-16 pb-4">
     Si bien hace ya cerca de 12 años que vivo en la Ciudad Autónoma de Buenos Aires, nunca me había hecho el Documento Nacional de Identidad (DNI) con alguna de las tantas direcciones que me permitieron habitar "la Capital". Eso cambió en algún momento de 2024: finalmente hice el trámite y obtuve un DNI con domicilio porteño, sin imaginar todas las consecuencias impensadas que eso iba a traer. 
 </p>
 <p class="px-10 py-4">
