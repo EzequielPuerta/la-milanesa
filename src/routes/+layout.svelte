@@ -2,7 +2,9 @@
 	import '../app.css';
     import 'katex/dist/katex.min.css';
     import ThemeController from '../components/ThemeController.svelte';
+    import { injectAnalytics } from '@vercel/analytics/sveltekit'
 	let { children } = $props();
+    injectAnalytics();
 </script>
 
 <main>

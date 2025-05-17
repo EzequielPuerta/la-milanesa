@@ -41,6 +41,7 @@
 		]
 	},
 	"dependencies": {
+		"@vercel/analytics": "^1.5.0",
 		"katex": "^0.16.22"
 	}
 }
