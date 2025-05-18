@@ -18,7 +18,7 @@
     });
 </script>
 
-{#if $metadata}
+<!-- {#if $metadata}
     <div
         class="hero min-h-screen"
         style={`background-image: url('${$metadata.hero_photo}')`}
@@ -49,5 +49,6 @@
     <div class="flex justify-center p-8">
         <span class="loading loading-spinner loading-lg"></span>
     </div>
-{/if}
+{/if} -->
 
+{@render children()}
