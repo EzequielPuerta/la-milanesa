@@ -14,6 +14,7 @@
     import { opinaiaMetadata } from './data/encuesta-opinaia';
     import { dcConsultoresMetadata } from './data/encuesta-dc-consultores';
     import type { PartyResult } from "./types";
+    import SocialButtons from '../../../components/SocialButtons.svelte';
     import {
         NEUTRAL_PARTY_NAME,
         NEUTRAL_COLOR,
@@ -424,6 +425,13 @@
     <p class="px-10 py-4">
         Muchas gracias por haber llegado hasta acá... no te olvides de lo más importante. Sea a quién sea, pero si sos de CABA, el domingo andá a ejercer tu derecho y votá.
     </p>
+
+    <div class="flex w-full flex-col">
+        <div class="divider">Compartir</div>
+        <div class="py-4 flex justify-center w-full">
+            <SocialButtons />
+        </div>
+    </div>
 
     <div class="py-10">
         <div class="skeleton h-100 w-full"></div>
