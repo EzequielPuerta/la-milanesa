@@ -32,7 +32,7 @@ export const circuitosMetadata = [
         position: "Independientes",
     },
     { 
-        name: 'Caruso Lombardi, R.',
+        name: 'Caruso, Lombardi R.',
         color: "#005e6c",
         percentage: 0.2,
         party: "Movimiento de Integración y Desarrollo",

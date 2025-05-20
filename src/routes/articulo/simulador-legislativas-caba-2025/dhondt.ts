@@ -31,7 +31,7 @@ export function computeElectionResults({
     // 0. Calculo contadores generales
     const totalPercentage = allSliders.reduce((sum, slider) => sum + slider.percentage, 0);
     const affirmativeTotalPercentage = allSliders.slice(0, -1).reduce((sum, slider) => sum + slider.percentage, 0);
-    const totalVotes = Math.min(totalPercentage, 100);
+    const totalVotes = Math.min(affirmativeTotalPercentage, 100);
     const affirmativeVotes = Math.min(affirmativeTotalPercentage, 100);
     const availableVoters = Math.round(totalVoters * (1 - totalVotes / 100));
     const thresholdDhondt = Math.round((affirmativeVotes * totalVoters / 100) * 3 / 100);

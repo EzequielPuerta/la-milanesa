@@ -32,7 +32,7 @@ export const cbConsultoraMetadata = [
         position: "Independientes",
     },
     { 
-        name: 'Caruso Lombardi, R.',
+        name: 'Caruso, Lombardi R.',
         color: "#005e6c",
         percentage: 1.8,
         party: "Movimiento de Integración y Desarrollo",

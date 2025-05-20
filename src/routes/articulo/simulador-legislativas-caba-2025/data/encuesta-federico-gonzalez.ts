@@ -32,7 +32,7 @@ export const federicoGonzalezMetadata = [
         position: "Independientes",
     },
     { 
-        name: 'Caruso Lombardi, R.',
+        name: 'Caruso, Lombardi R.',
         color: "#005e6c",
         percentage: 1,
         party: "Movimiento de Integración y Desarrollo",

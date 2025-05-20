@@ -1,8 +1,8 @@
-export const isasiBurdmanMetadata = [
+export const resultadoPreliminarMetadata = [
     { 
         name: 'Abal Medina, J. M.',
         color: "#7dd3fc",
-        percentage: 1,
+        percentage: 0.51,
         party: "Justa, Libre y Soberana",
         alias: "JLyS",
         position: "Oposición",
@@ -10,7 +10,7 @@ export const isasiBurdmanMetadata = [
     { 
         name: 'Adorni, Manuel',
         color: "#68508b",
-        percentage: 22,
+        percentage: 30.13,
         party: "La Libertad Avanza",
         alias: "LLA",
         position: "Independientes",
@@ -18,7 +18,7 @@ export const isasiBurdmanMetadata = [
     { 
         name: 'Biasi, Vanina',
         color: "#fa1c1f",
-        percentage: 4,
+        percentage: 3.16,
         party: "Frente de Izquierda y de los Trabajadores - Unidad",
         alias: "FITu",
         position: "Oposición",
@@ -26,7 +26,7 @@ export const isasiBurdmanMetadata = [
     { 
         name: 'Biondini, César',
         color: "#d9d8de",
-        percentage: 0.3,
+        percentage: 0.16,
         party: "Frente Patriota Federal",
         alias: "FPF",
         position: "Independientes",
@@ -34,7 +34,7 @@ export const isasiBurdmanMetadata = [
     { 
         name: 'Caruso, Lombardi R.',
         color: "#005e6c",
-        percentage: 0.3,
+        percentage: 1.67,
         party: "Movimiento de Integración y Desarrollo",
         alias: "MID",
         position: "Independientes",
@@ -42,7 +42,7 @@ export const isasiBurdmanMetadata = [
     { 
         name: 'Kim, Alejandro',
         color: "#5fcaf8",
-        percentage: 1,
+        percentage: 2.03,
         party: "Principios y Valores",
         alias: "PyV",
         position: "Oposición",
@@ -50,7 +50,7 @@ export const isasiBurdmanMetadata = [
     { 
         name: 'Koutsovitis, Eva',
         color: "#63b53d",
-        percentage: 1,
+        percentage: 0.33,
         party: "Confluencia por la Igualdad y la Soberania",
         alias: "CIS",
         position: "Oposición",
@@ -58,7 +58,7 @@ export const isasiBurdmanMetadata = [
     { 
         name: 'Larreta, Horacio R.',
         color: "#c8df6e",
-        percentage: 10,
+        percentage: 8.08,
         party: "Volvamos Buenos Aires",
         alias: "VBsAs",
         position: "Independientes",
@@ -66,7 +66,7 @@ export const isasiBurdmanMetadata = [
     { 
         name: 'Levy, Lucille',
         color: "#d53175",
-        percentage: 2,
+        percentage: 2.31,
         party: "Evolución Ya",
         alias: "Evolución",
         position: "Aliados",
@@ -74,7 +74,7 @@ export const isasiBurdmanMetadata = [
     { 
         name: 'Lospennato, Silvia',
         color: "#facc15",
-        percentage: 14,
+        percentage: 15.92,
         party: "Buenos Aires Primero",
         alias: "PRO",
         position: "Oficialismo",
@@ -82,7 +82,7 @@ export const isasiBurdmanMetadata = [
     { 
         name: 'Marra, Ramiro',
         color: "#708aff",
-        percentage: 4,
+        percentage: 2.62,
         party: "Unión del Centro Democrático",
         alias: "UCeDe",
         position: "Aliados",
@@ -90,7 +90,7 @@ export const isasiBurdmanMetadata = [
     { 
         name: 'Oliveto, Paula',
         color: "#d3315b",
-        percentage: 3,
+        percentage: 2.50,
         party: "Coalición Cívica ARI",
         alias: "CC-ARI",
         position: "Aliados",
@@ -98,7 +98,7 @@ export const isasiBurdmanMetadata = [
     { 
         name: 'Peretta, Marcelo',
         color: "#239263",
-        percentage: 1,
+        percentage: 0.13,
         party: "Movimiento Plural - Remedios para CABA",
         alias: "MP",
         position: "Independientes",
@@ -106,7 +106,7 @@ export const isasiBurdmanMetadata = [
     { 
         name: 'Santoro, Leandro',
         color: "#00b8ff",
-        percentage: 20,
+        percentage: 27.35,
         party: "Es Ahora Buenos Aires",
         alias: "Es Ahora",
         position: "Oposición",
@@ -114,7 +114,7 @@ export const isasiBurdmanMetadata = [
     { 
         name: 'Santoro, Yamil',
         color: "#D6C7AE",
-        percentage: 1,
+        percentage: 0.6,
         party: "Unión Porteña Libertaria",
         alias: "UPL",
         position: "Aliados",
@@ -122,7 +122,7 @@ export const isasiBurdmanMetadata = [
     { 
         name: 'Winokur, Federico',
         color: "#e86761",
-        percentage: 0.5,
+        percentage: 0.38,
         party: "La Izquierda en la Ciudad - Nuevo MAS",
         alias: "NMAS",
         position: "Oposición",
@@ -130,7 +130,7 @@ export const isasiBurdmanMetadata = [
     { 
         name: 'Zurbriggen, Mila',
         color: "#00D0D0",
-        percentage: 1,
+        percentage: 0.20,
         party: "El Movimiento - Nueva Generación",
         alias: "EM",
         position: "Independientes",

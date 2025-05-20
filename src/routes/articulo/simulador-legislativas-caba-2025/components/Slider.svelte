@@ -1,7 +1,9 @@
 <script lang="ts">
     import { BLANK_VOTE_NAME, NULL_VOTE_NAME } from '../constants';
+    import { darkenColor } from '$lib/colors';
 
     export let data;
+    export let disabled: boolean;
     export let seats: number | null;
     export let rank: number | null;
     export let asNeutral: boolean;
@@ -12,27 +14,9 @@
         const newValue = +(e.target as HTMLInputElement).value;
         onChange(newValue);
     }
-
-    function darkenColor(hex: string, amount = 0.5): string {
-        let color = hex.replace('#', '');
-        const num = parseInt(color, 16);
-        let r = (num >> 16) & 0xFF;
-        let g = (num >> 8) & 0xFF;
-        let b = num & 0xFF;
-
-        r = Math.max(0, Math.floor(r * (1 - amount)));
-        g = Math.max(0, Math.floor(g * (1 - amount)));
-        b = Math.max(0, Math.floor(b * (1 - amount)));
-
-        const newColor = '#' + ((1 << 24) + (r << 16) + (g << 8) + b)
-            .toString(16)
-            .slice(1)
-            .toUpperCase();
-        return newColor;
-    }
 </script>
   
-<div class="w-50 md:w-45 flex flex-col gap-0.5 md:gap-2">
+<div class="w-50 md:w-30 lg:w-45 flex flex-col gap-0.5 md:gap-2">
     <div class="font-semibold text-xs md:text-sm" style="color: {asNeutral ? darkenColor(data.color, 0.3) : data.color}">
         {#if data.name !== BLANK_VOTE_NAME && data.name !== NULL_VOTE_NAME}
             {rank}°) {data.name} {(rank === 1) && (data.percentage > 0) ? '🎉' : ''}
@@ -48,6 +32,7 @@
     <div class="flex items-center justify-end w-full gap-1">
         <input
             type="range"
+            disabled={disabled}
             min="0"
             max={maxAllowed}
             value={data.percentage}
@@ -58,7 +43,7 @@
     </div>
     <div class="flex items-center justify-between w-full gap-1">
         <span class="text-xs" style="color: {asNeutral ? darkenColor(data.color) : data.color}">
-            {data.percentage}%
+            {data.percentage.toFixed(2)}%
         </span>
         {#if data.party}
             <span class="text-xs" style="color: {asNeutral ? darkenColor(data.color) : data.color}">

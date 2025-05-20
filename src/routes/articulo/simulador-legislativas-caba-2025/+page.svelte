@@ -13,6 +13,7 @@
     import { equipoMideMetadata } from './data/encuesta-equipo-mide';
     import { opinaiaMetadata } from './data/encuesta-opinaia';
     import { dcConsultoresMetadata } from './data/encuesta-dc-consultores';
+    import { resultadoPreliminarMetadata } from './data/resultado-preliminar';
     import type { PartyResult } from "./types";
     import SocialButtons from '../../../components/SocialButtons.svelte';
     import {
@@ -70,11 +71,27 @@
 
     const quotients = `\\frac{100}{1}, \\frac{100}{2}, \\frac{100}{3}, \\frac{100}{4}, \\frac{100}{5}, \\ldots, \\frac{100}{29}, \\frac{100}{30}`;
     let rendered = "";
+    let parsedCandidatesMetadata = candidatesMetadata;
 
     onMount(() => {
-      rendered = katex.renderToString(quotients, {
-        throwOnError: false
-      });
+        const params = new URLSearchParams(window.location.search);
+
+        if (params.has('candidates')) {
+            try {
+                const decoded = decodeURIComponent(params.get('candidates') || '');
+                const parsed = JSON.parse(decoded);
+
+                if (Array.isArray(parsed)) {
+                    parsedCandidatesMetadata = parsed;
+                }
+            } catch (error) {
+                parsedCandidatesMetadata = candidatesMetadata;
+            }
+        }
+
+        rendered = katex.renderToString(quotients, {
+            throwOnError: false
+        });
     });
 </script>
 
@@ -152,11 +169,11 @@
     </div>
 
     <p class="px-10 py-4">
-        Como se aprecia, el oficialismo (el <strong style="color: #facc15">PRO</strong> y el partido de Graciela Ocaña, <strong style="color: #2c8f6d">Confianza Pública</strong>, de las pocos partidos de la ya extinta coalición <strong style="color: #facc15">Juntos por el Cambio</strong> que mantiene su afinidad con el PRO) no posee la mayoría.
+        Como se aprecia, el oficialismo (es decir el <strong style="color: #facc15">PRO</strong>) no posee la mayoría. En marzo 2025, <strong style="color: #2c8f6d">Graciela Ocaña</strong> del partido <strong style="color: #2c8f6d">Confianza Pública</strong> (que posee actualmente 3 legisladores), acordó con <strong style="color: #c8df6e">Horacio Rodriguez Larreta</strong> ser parte de <strong style="color: #c8df6e">Volvamos Buenos Aires</strong>, su nueva coalición luego de irse del <strong style="color: #facc15">PRO</strong>. De esta manera, la coalición que había conformado el <strong style="color: #facc15">PRO</strong>, <strong style="color: #facc15">Juntos por el Cambio</strong>, perdía uno de los últimos partidos que aún seguían dándole su apoyo.
     </p>
 
     <p class="px-10 py-4">
-        Por el contrario, la misma está en manos de la oposición: en primer lugar, la también desaparecida alianza <strong style="color: #48b8ea">Unión por la Patria</strong> (representada en estos comicios en parte por Leandro Santoro y <strong style="color: #00b8ff">Es Ahora Buenos Aires</strong>) y en menor medida, el <strong style="color: #fa1c1f">Frente de Izquierda</strong>.
+        Observamos que la mayoría de las bancas estan en manos de la oposición: en primer lugar, la también desaparecida alianza <strong style="color: #48b8ea">Unión por la Patria</strong> (representada en estos comicios en parte por Leandro Santoro y <strong style="color: #00b8ff">Es Ahora Buenos Aires</strong>) y en menor medida, el <strong style="color: #fa1c1f">Frente de Izquierda</strong>.
     </p>
 
     <p class="px-10 py-4">
@@ -168,7 +185,7 @@
     </p>
 
     <p class="px-10 pt-4">
-        Resumiendo, el oficialismo del <strong style="color: #facc15">PRO</strong> tiene estríctamente <strong>12</strong> bancas, pero con sus alianzas dentro y fuera de lo que fue el espacio de <strong style="color: #facc15">Juntos por el Cambio</strong> pueden llegar a sumar <strong>28</strong> (sin contar algún apoyo mínimo que suelen obtener de <strong style="color: #68508b">La Libertad Avanza</strong>). La oposición acumula <strong>21</strong> bancas, dandole un margen de ventaja de <strong>7</strong> votos. Gracias a esta ventaja han podido aprobar distintas iniciativas, como la mencionada suspensión de las PASO.
+        Resumiendo, el oficialismo del <strong style="color: #facc15">PRO</strong> tiene estríctamente <strong>12</strong> bancas, pero con sus alianzas dentro y fuera de lo que fue el espacio de <strong style="color: #facc15">Juntos por el Cambio</strong> pueden llegar a sumar <strong>25</strong> (sin contar algún apoyo mínimo que suelen obtener de <strong style="color: #68508b">La Libertad Avanza</strong> o los ex <strong style="color: #2c8f6d">Confianza Pública</strong>). La oposición acumula <strong>21</strong> bancas, dandole un margen de ventaja de <strong>4</strong> votos. Gracias a esta ventaja han podido aprobar distintas iniciativas, como la mencionada suspensión de las PASO.
     </p>
 
     <h3 class="px-10 py-10">Las bancas que se ponen en juego</h3>
@@ -191,7 +208,7 @@
     </div>
 
     <p class="px-10 pt-4">
-        La oposición conserva solo <strong>11</strong> bancas, pero el oficialismo y sus aliados se le acercan, bajando hasta el piso de <strong>15</strong> bancas. Ahora la diferencia es de solo <strong>4</strong> votos.
+        La oposición conserva solo <strong>11</strong> bancas, pero el oficialismo y sus aliados se le acercan, bajando hasta el piso de <strong>13</strong> bancas. Ahora la diferencia es de solo <strong>2</strong> votos.
     </p>
 
     <p class="px-10 pt-4">
@@ -241,7 +258,7 @@
     <h4 id="isasi-burdman" class="px-10 py-10">1) Isasi-Burdman</h4>
 
     <p class="px-10 pb-4">
-        La encuesta realizada por esta consultora nos da ganador a <strong style="color: #68508b">Manuel Adorni con 22%</strong> por <strong style="color: #68508b">La Libertad Avanza</strong>, seguido por <strong style="color: #00b8ff">Leandro Santoro</strong> de <strong style="color: #00b8ff">Es Ahora Buenos Aires</strong>. Podemos observar que se mantiene la ventaja del oficialismo del <strong style="color: #facc15">PRO</strong> con un ajustado margen de 3 votos a favor.
+        La encuesta realizada por esta consultora nos da ganador a <strong style="color: #68508b">Manuel Adorni con 22%</strong> por <strong style="color: #68508b">La Libertad Avanza</strong>, seguido por <strong style="color: #00b8ff">Leandro Santoro</strong> de <strong style="color: #00b8ff">Es Ahora Buenos Aires</strong>. Podemos observar que se mantiene la ventaja del oficialismo del <strong style="color: #facc15">PRO</strong> con un ajustado margen de 1 voto a favor.
     </p>
 
     <p class="px-10 pb-4">
@@ -292,7 +309,7 @@
     <h4 id="circuitos" class="px-10 py-10">3) Circuitos</h4>
 
     <p class="px-10 pb-4">
-        Según esta encuesta el ganador sería <strong style="color: #00b8ff">Leandro Santoro</strong> de <strong style="color: #00b8ff">Es Ahora Buenos Aires</strong> con un <strong style="color: #00b8ff">24.1%</strong>. Y esta vez en segundo lugar estaría <strong style="color: #facc15">Silvia Lospennato</strong> con <strong style="color: #facc15">19.7%</strong> por <strong style="color: #facc15">Buenos Aires Primero (PRO)</strong>. Al salir segundo esta vez, el <strong style="color: #facc15">oficialismo</strong> obtendría 7 bancas (una mas de las 6 que puso en juego) y mantendría una buena ventaja con un diferencial a su favor de 6 bancas (una menos de la que tiene actualmente).
+        Según esta encuesta el ganador sería <strong style="color: #00b8ff">Leandro Santoro</strong> de <strong style="color: #00b8ff">Es Ahora Buenos Aires</strong> con un <strong style="color: #00b8ff">24.1%</strong>. Y esta vez en segundo lugar estaría <strong style="color: #facc15">Silvia Lospennato</strong> con <strong style="color: #facc15">19.7%</strong> por <strong style="color: #facc15">Buenos Aires Primero (PRO)</strong>. Al salir segundo esta vez, el <strong style="color: #facc15">oficialismo</strong> obtendría 7 bancas (una mas de las 6 que puso en juego) y mantendría su ventaja actual con un diferencial a su favor de 4 bancas.
     </p>
 
     <p class="px-10 pb-4">
@@ -309,7 +326,7 @@
     <h4 id="cb-consultora" class="px-10 py-10">4) CB Consultora</h4>
 
     <p class="px-10 pb-4">
-        Según esta encuesta el ganador sería <strong style="color: #00b8ff">Leandro Santoro</strong> de <strong style="color: #00b8ff">Es Ahora Buenos Aires</strong> con un <strong style="color: #00b8ff">28%</strong>. En segundo lugar vuelve a quedar <strong style="color: #68508b">Manuel Adorni</strong> con <strong style="color: #68508b">23.5%</strong> por <strong style="color: #68508b">La Libertad Avanza</strong>. El <strong style="color: #facc15">PRO</strong> alcanzaría apenas una ventaja de 2 bancas más a su favor, en comparación con la oposición.
+        Según esta encuesta el ganador sería <strong style="color: #00b8ff">Leandro Santoro</strong> de <strong style="color: #00b8ff">Es Ahora Buenos Aires</strong> con un <strong style="color: #00b8ff">28%</strong>. En segundo lugar vuelve a quedar <strong style="color: #68508b">Manuel Adorni</strong> con <strong style="color: #68508b">23.5%</strong> por <strong style="color: #68508b">La Libertad Avanza</strong>. El <strong style="color: #facc15">PRO</strong> perdería su ventaja, en comparación con la oposición.
     </p>
 
     <p class="px-10 pb-4">
@@ -326,7 +343,7 @@
     <h4 id="federico-gonzalez" class="px-10 py-10">5) Federico González y Asociados</h4>
 
     <p class="px-10 pb-4">
-        En esta particular encuesta, el ganador volvería a ser <strong style="color: #00b8ff">Leandro Santoro</strong> de <strong style="color: #00b8ff">Es Ahora Buenos Aires</strong> con un <strong style="color: #00b8ff">31.1%</strong>. En segundo lugar estaría <strong style="color: #facc15">Silvia Lospennato</strong> con <strong style="color: #facc15">23.2%</strong> por <strong style="color: #facc15">Buenos Aires Primero (PRO)</strong>. A pesar de hacer una buena elección dado el contexto, el <strong style="color: #facc15">PRO</strong> finalizaría con una ventaja mínima, solo una banca por encima de la oposición.
+        En esta particular encuesta, el ganador volvería a ser <strong style="color: #00b8ff">Leandro Santoro</strong> de <strong style="color: #00b8ff">Es Ahora Buenos Aires</strong> con un <strong style="color: #00b8ff">31.1%</strong>. En segundo lugar estaría <strong style="color: #facc15">Silvia Lospennato</strong> con <strong style="color: #facc15">23.2%</strong> por <strong style="color: #facc15">Buenos Aires Primero (PRO)</strong>. A pesar de hacer una buena elección dado el contexto, el <strong style="color: #facc15">PRO</strong> finalizaría con una desventaja mínima de una banca por debajo de la oposición.
     </p>
 
     <p class="px-10 pb-4">
@@ -343,7 +360,7 @@
     <h4 id="giacobbe" class="px-10 py-10">6) Giacobbe</h4>
 
     <p class="px-10 pb-4">
-        En esta encuesta el ganador volvería a ser <strong style="color: #68508b">Manuel Adorni</strong> con <strong style="color: #68508b">31.8%</strong> por <strong style="color: #68508b">La Libertad Avanza</strong>. Por su parte, <strong style="color: #00b8ff">Leandro Santoro</strong> de <strong style="color: #00b8ff">Es Ahora Buenos Aires</strong> le pisa los talones con un <strong style="color: #00b8ff">30.7%</strong>. Es uno de los peores escenarios para el <strong style="color: #facc15">Buenos Aires Primero (PRO)</strong>, que quedaría en desventaja frente a la oposición, con 2 bancas menos.
+        En esta encuesta el ganador volvería a ser <strong style="color: #68508b">Manuel Adorni</strong> con <strong style="color: #68508b">31.8%</strong> por <strong style="color: #68508b">La Libertad Avanza</strong>. Por su parte, <strong style="color: #00b8ff">Leandro Santoro</strong> de <strong style="color: #00b8ff">Es Ahora Buenos Aires</strong> le pisa los talones con un <strong style="color: #00b8ff">30.7%</strong>. Es uno de los peores escenarios para el <strong style="color: #facc15">Buenos Aires Primero (PRO)</strong>, que quedaría en desventaja frente a la oposición, con 4 bancas menos.
     </p>
 
     <p class="px-10 pb-4">
@@ -360,7 +377,7 @@
     <h4 id="equipo-mide" class="px-10 py-10">7) Equipo Mide</h4>
 
     <p class="px-10 pb-4">
-        En esta encuesta habría un empate entre <strong style="color: #68508b">Manuel Adorni</strong> con <strong style="color: #68508b">19%</strong> por <strong style="color: #68508b">La Libertad Avanza</strong> y <strong style="color: #00b8ff">Leandro Santoro</strong> de <strong style="color: #00b8ff">Es Ahora Buenos Aires</strong>. <strong style="color: #facc15">Buenos Aires Primero (PRO)</strong> recuperaría algo de ventaja, con 2 bancas por encima de la oposición.
+        En esta encuesta habría un empate entre <strong style="color: #68508b">Manuel Adorni</strong> con <strong style="color: #68508b">19%</strong> por <strong style="color: #68508b">La Libertad Avanza</strong> y <strong style="color: #00b8ff">Leandro Santoro</strong> de <strong style="color: #00b8ff">Es Ahora Buenos Aires</strong>. <strong style="color: #facc15">Buenos Aires Primero (PRO)</strong> perdería de nuevo su ventaja, con ninguna banca por encima de la oposición.
     </p>
 
     <p class="px-10 pb-4">
@@ -377,7 +394,7 @@
     <h4 id="opinaia" class="px-10 py-10">8) Opinaia</h4>
 
     <p class="px-10 pb-4">
-        Esta encuesta da por victorioso a <strong style="color: #68508b">Manuel Adorni</strong> con <strong style="color: #68508b">24%</strong> por <strong style="color: #68508b">La Libertad Avanza</strong>. <strong style="color: #00b8ff">Leandro Santoro</strong> de <strong style="color: #00b8ff">Es Ahora Buenos Aires</strong> esta vez queda en segundo lugar con <strong style="color: #00b8ff">21%</strong>. El <strong style="color: #facc15">oficialismo</strong> vuelve a obtener solo 2 bancas de ventaja.
+        Esta encuesta da por victorioso a <strong style="color: #68508b">Manuel Adorni</strong> con <strong style="color: #68508b">24%</strong> por <strong style="color: #68508b">La Libertad Avanza</strong>. <strong style="color: #00b8ff">Leandro Santoro</strong> de <strong style="color: #00b8ff">Es Ahora Buenos Aires</strong> esta vez queda en segundo lugar con <strong style="color: #00b8ff">21%</strong>. El <strong style="color: #facc15">oficialismo</strong> vuelve a perder su ventaja.
     </p>
 
     <p class="px-10 pb-4">
@@ -394,7 +411,7 @@
     <h4 id="dc-consultores" class="px-10 py-10">9) DC Consultores</h4>
 
     <p class="px-10 pb-4">
-        En esta encuesta <strong style="color: #68508b">Manuel Adorni</strong> de <strong style="color: #68508b">La Libertad Avanza</strong> queda primero con <strong style="color: #68508b">29.3%</strong>. <strong style="color: #00b8ff">Leandro Santoro</strong> de <strong style="color: #00b8ff">Es Ahora Buenos Aires</strong> vuelve a quedar segundo con <strong style="color: #00b8ff">24.1%</strong>. El <strong style="color: #facc15">PRO</strong> saca una ventaja de 4 bancas a su favor.
+        En esta encuesta <strong style="color: #68508b">Manuel Adorni</strong> de <strong style="color: #68508b">La Libertad Avanza</strong> queda primero con <strong style="color: #68508b">29.3%</strong>. <strong style="color: #00b8ff">Leandro Santoro</strong> de <strong style="color: #00b8ff">Es Ahora Buenos Aires</strong> vuelve a quedar segundo con <strong style="color: #00b8ff">24.1%</strong>. El <strong style="color: #facc15">PRO</strong> saca una ventaja de 2 bancas a su favor.
     </p>
 
     <p class="px-10 pb-4">
@@ -411,30 +428,39 @@
     <h3 class="px-10 py-10">¡Simulá tus propios escenarios!</h3>
 
     <p class="px-10 pb-4">
-        Ahora te proponemos experimentar un poco con el simulador. Podes asignar porcentajes a los distintos candidatos, no te preocupes, las barras deslizantes se actualizarán de acuerdo a lo que vayas ingresando para que los números cierren, al igual que los totalizadores del diagrama. El sistema D'Hondt se irá aplicando en vivo de acuerdo a tus modificaciones. En todo momento podrás visualizar cuál es el <em>umbral</em> a superar por los candidatos para poder pelear por una banca. Aquellos que no obtengan bancas o no superen el umbral, quedarán oscurecidos. Los que las obtengan, lo indicarán debajo de su barra correspondiente, en la esquina inferior derecha de la misma.
+        Ahora te proponemos experimentar un poco con el simulador. Podes asignar porcentajes a los distintos candidatos, no te preocupes, las barras deslizantes se actualizarán de acuerdo a lo que vayas ingresando para que los números cierren, al igual que los totalizadores del diagrama. Todos los votos que aún no hayas asignado a alguna lista, serán automáticamente calculados como votos nulos hasta que sean asignados. Podés reducir el porcentaje de participación utilizando la barra central. El sistema D'Hondt se irá aplicando en vivo de acuerdo a tus modificaciones. En todo momento podrás visualizar cuál es el <em>umbral</em> a superar por los candidatos para poder pelear por una banca. Aquellos que no obtengan bancas o no superen el umbral, quedarán oscurecidos. Los que las obtengan, lo indicarán debajo de su barra correspondiente, en la esquina inferior derecha de la misma. afectan el umbral pero no el porcentaje de votos afirmativos). Esto es para que 
     </p>
 
     <p class="px-10 pb-4">
-        Si estas visitando la web desde un celular, vas a encontrar todas las "barritas" disponibles deslizando para el costado, incluidas las que te permitirán agregar voto en blanco (afecta al umbral) o voto nulo (no afecta al umbral). A su vez, a la izquierda de los nombres de cada candidato podrás ver el ranking actualizandose, al igual que aparecerá el <em>emoji</em> 🎉 para indicar rápidamente quién es el ganador hasta el momento. También se irán calculando los bloques finales, cada uno con su respectiva cantidad de bancas. Finalmente, podrás observar como se actualiza la ventaja de la cantidad de bancas oficialistas y aliadas vs. opositoras.
+        Si estas visitando la web desde un celular, vas a encontrar todas las "barritas" disponibles deslizando para el costado, incluidas las que te permitirán agregar voto en blanco (afecta al umbral) o voto nulo (no afecta al umbral). El voto nulo no lo podrás modificar porque representa el complemento de tu elección, como se ha mencionado, todos los votos que no asignes, serán considerados automáticamente como nulos. Si no los queres asignar pero no queres aumentar la cantidad de votos nulos, probablemente quieras reducir la participación electoral. A su vez, a la izquierda de los nombres de cada candidato podrás ver el ranking actualizandose, al igual que aparecerá el <em>emoji</em> 🎉 para indicar rápidamente quién es el ganador hasta el momento. También se irán calculando los bloques finales, cada uno con su respectiva cantidad de bancas. Además podrás observar como se actualiza la ventaja de la cantidad de bancas oficialistas y aliadas vs. opositoras.
+    </p>
+
+    <p class="px-10 pb-4">
+        En todo momento podés reiniciar los valores para poder empezar desde los valores originales, además de acceder al gráfico de barras que indica el porcentaje obtenido por cada lista junto a la cantidad de bancas ganadas. Para ello deberás hacer click en el botón deslizante en el extremo superior izquierdo. Nuevamente, las listas que no superaron el umbral o no obtuvieron bancas, se verán oscurecidas.
     </p>
 
     <div class="w-full">
-        <InteractiveChamberDiagram {candidatesMetadata} />
+        <InteractiveChamberDiagram candidatesMetadata={parsedCandidatesMetadata} />
     </div>
 
     <p class="px-10 py-4">
         Muchas gracias por haber llegado hasta acá... no te olvides de lo más importante. Sea a quién sea, pero si sos de CABA, el domingo andá a ejercer tu derecho y votá.
     </p>
 
+    <h3 class="px-10 py-10">Actualización: lunes 19 de mayo 2025</h3>
+
+    <div class="flex w-full flex-col">
+        <div class="divider">Mesas escrutadas: <strong>99.8%</strong></div>
+    </div>
+
+    <div class="w-full">
+        <InteractiveChamberDiagram candidatesMetadata={resultadoPreliminarMetadata} initialParticipationRate={53.35} initialBlankVotePercentage={1.90} />
+    </div>
+
     <div class="flex w-full flex-col">
         <div class="divider">Compartir</div>
         <div class="py-4 flex justify-center w-full">
             <SocialButtons />
         </div>
-    </div>
-
-    <div class="py-10">
-        <div class="skeleton h-100 w-full"></div>
-        <p class="py-4 flex justify-end w-full">... Esperando los resultados finales</p>
     </div>
 </div>

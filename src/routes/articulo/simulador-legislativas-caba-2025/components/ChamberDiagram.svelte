@@ -129,11 +129,18 @@
             </div>
             <div class="flex flex-col items-center mt-1 md:mt-3">
                 <p class="px-0 text-xs md:text-sm font-medium text-gray-500">Votos disponibles</p>
-                <p class="px-0 text-md md:text-2xl font-semibold text-gray-700">{availableVoters.toLocaleString()}</p>
+                <p class="px-0 text-md md:text-2xl font-semibold"
+                    class:text-error={availableVoters > 0}>
+                    {availableVoters.toLocaleString()}
+                </p>
             </div>
             <div class="flex flex-col items-center mt-1 md:mt-3">
                 <p class="px-0 text-xs md:text-sm font-medium text-gray-500">Ventaja Oficialista</p>
-                <p class="px-0 text-md md:text-2xl font-semibold text-gray-700">{governmentAdvantage > 0 ? '+' : ''}{governmentAdvantage}</p>
+                <p class="px-0 text-md md:text-2xl font-semibold"
+                    class:text-success={governmentAdvantage > 0}
+                    class:text-warning={governmentAdvantage === 0}
+                    class:text-error={governmentAdvantage < 0}>
+                    {governmentAdvantage > 0 ? '+' : ''}{governmentAdvantage}</p>
             </div>
             <div class="flex flex-col items-center mt-1 md:mt-3">
                 <p class="px-0 text-xs md:text-sm font-medium text-gray-500">Umbral D’Hondt</p>

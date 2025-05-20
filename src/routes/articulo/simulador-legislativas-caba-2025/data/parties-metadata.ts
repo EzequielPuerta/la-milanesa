@@ -36,7 +36,7 @@ export const candidatesMetadata = [
         url: "https://frentepatriota.org",
     },
     { 
-        name: 'Caruso Lombardi, R.',
+        name: 'Caruso, Lombardi R.',
         color: "#005e6c",
         percentage: 0,
         party: "Movimiento de Integración y Desarrollo",
@@ -197,10 +197,10 @@ export const seatsToBeVacated = [
     },
     {
         original_party: "Confianza Pública",
-        party: "Confianza Pública",
-        alias: "CP",
-        color: "#2c8f6d",
-        position: "Oficialismo",
+        party: "Volvamos Buenos Aires",
+        alias: "VBsAs",
+        color: "#c8df6e",
+        position: "Independientes",
         seats: 1
     },
     {
@@ -272,10 +272,10 @@ export const seatsAlreadyOccupied = [
     },
     {
         original_party: "Confianza Pública",
-        party: "Confianza Pública",
-        alias: "CP",
-        color: "#2c8f6d",
-        position: "Oficialismo",
+        party: "Volvamos Buenos Aires",
+        alias: "VBsAs",
+        color: "#c8df6e",
+        position: "Independientes",
         seats: 2
     },
     {
