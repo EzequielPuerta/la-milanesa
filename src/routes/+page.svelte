@@ -20,10 +20,7 @@
 			/>
 		{/if}
 		<div>
-			<h1 class="sm:text-5xl py-6">Sean bienvenidos a este espacio</h1>
-			<p class="py-2">
-				Donde publicaremos diferentes artículos de actualidad en clave de datos.
-			</p>
+			<h1 class="sm:text-5xl py-6">Datos, gráficos e historias para intentar entender la realidad.</h1>
 			<p class="py-2">
 				Muy pronto, una intro "como la gente"...
 			</p>
