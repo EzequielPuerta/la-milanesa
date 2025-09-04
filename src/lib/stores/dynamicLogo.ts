@@ -1,15 +1,26 @@
-import { readable } from 'svelte/store';
+import { readable, type Readable } from 'svelte/store';
+import { browser } from '$app/environment';
 
-export function createThemeLogoSrc(selector: (isDark: boolean) => string) {
-	return readable('', (set) => {
-		const matcher = window.matchMedia('(prefers-color-scheme: dark)');
+function isDarkTheme(): boolean {
+	if (!browser) return false;
+	const theme = document.documentElement.dataset.theme ?? 'autumn';
+	return theme === 'sunset';
+}
 
-		const update = () => {
-			set(selector(matcher.matches));
-		};
+export function createThemeLogoSrc(getSrc: (isDark: boolean) => string): Readable<string> {
+	return readable(getSrc(isDarkTheme()), (set) => {
+		if (!browser) return () => {};
+
+		const update = () => {set(getSrc(isDarkTheme()));};
+        
+		const observer = new MutationObserver(update);
+		observer.observe(document.documentElement, {
+			attributes: true,
+			attributeFilter: ['data-theme']
+		});
 
 		update();
-		matcher.addEventListener('change', update);
-		return () => matcher.removeEventListener('change', update);
+
+		return () => observer.disconnect();
 	});
 }

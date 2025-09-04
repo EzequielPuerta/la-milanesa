@@ -1,31 +1,31 @@
-<script>
-	import { onMount } from 'svelte';
-    import { articles } from './articulo/index.js';
+<script lang="ts">
+    import { onMount } from 'svelte';
+    import { articles } from './articulo/articles.js';
     import ArticleCard from '../components/ArticleCard.svelte';
-	import { logoLarge } from '$lib/stores/logoVariants';
+    import { logoLarge } from '$lib/stores/logoVariants';
 
-    let mounted = false;
-	onMount(() => {
-		mounted = true;
-	});
+    let mounted: boolean = false;
+    onMount(() => {
+        mounted = true;
+    });
 </script>
 
 <div class="hero bg-base-200 min-h-screen">
-	<div class="hero-content flex-col lg:flex-row items-center text-center lg:text-left">
-		{#if mounted}
-			<img
-				src={$logoLarge}
-				alt="La verdad de la milanesa - logo"
-				class="max-w-xs lg:max-w-sm"
-			/>
-		{/if}
-		<div>
-			<h1 class="sm:text-5xl py-6">Datos, gráficos e historias para intentar entender la realidad.</h1>
-			<p class="py-2">
-				Muy pronto, una intro "como la gente"...
-			</p>
-		</div>
-	</div>
+    <div class="hero-content flex-col lg:flex-row items-center text-center lg:text-left">
+        {#if mounted}
+            <img
+                src={$logoLarge}
+                alt="La verdad de la milanesa - logo"
+                class="max-w-xs lg:max-w-sm"
+            />
+        {/if}
+        <div>
+            <h1 class="sm:text-5xl py-6">Datos, gráficos e historias para intentar entender la realidad.</h1>
+            <p class="py-2">
+                Muy pronto, una intro "como la gente"...
+            </p>
+        </div>
+    </div>
 </div>
 
 <div class="max-w-screen-lg mx-auto p-8">
