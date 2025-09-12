@@ -52,7 +52,7 @@ export const articles: ArticleMetadata[] = [
         title: 'Bahía Blanca y el antiperonismo',
         is_new: true,
         is_available: true,
-        date: new Date(2025, 8, 10),
+        date: new Date(2025, 8, 11),
         abstract: "Una radiografía de las últimas elecciones de medio término con foco en el municipio bonaerense.",
         tags: ["Política", "Elecciones", "SIG"],
         photo: "/images/covers/antiperonismo-y-bahia-blanca.png",
