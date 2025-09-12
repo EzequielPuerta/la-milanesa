@@ -43,10 +43,14 @@
 	},
 	"dependencies": {
 		"@vercel/analytics": "^1.5.0",
+		"d3": "^7.9.0",
 		"d3-array": "^3.2.4",
+		"d3-color": "^3.1.0",
 		"d3-scale": "^4.0.2",
 		"katex": "^0.16.22",
 		"lucide-svelte": "^0.511.0",
+		"papaparse": "^5.5.3",
+		"plotly.js-dist": "^3.1.0",
 		"svelte-share-buttons-component": "^3.0.0"
 	}
 }

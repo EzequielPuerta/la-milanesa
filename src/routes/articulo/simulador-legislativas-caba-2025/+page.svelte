@@ -104,7 +104,7 @@
     <div class="hero-overlay"></div>
     <div class="hero-content text-neutral-content text-center">
         <div class="max-w-md lg:max-w-3xl">
-            <h1 class="mb-5 text-5xl text-base-content">
+            <h1 class="mb-5 text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-base-content">
                 Simulador de escenarios para las legislativas de CABA 2025
             </h1>
             <p class="mb-5 font-bold px-4 py-2 text-base-content rounded-lg inline-block">
@@ -112,7 +112,7 @@
             </p>
             <p><strong>{new Date(2025, 5, 11).toLocaleDateString('es-AR')} - CABA, Argentina</strong></p>
             <div class="pt-6">
-                {#each ["Política", "Simulador"] as tag}
+                {#each ["Política", "Elecciones", "Simulador"] as tag}
                     <span class="badge badge-primary mx-3">{tag}</span>
                 {/each}
             </div>
