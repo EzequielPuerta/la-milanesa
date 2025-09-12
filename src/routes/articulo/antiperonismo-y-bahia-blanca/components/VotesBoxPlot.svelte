@@ -84,7 +84,7 @@
       xaxis: {
         title: isMobile ? 'Porcentaje' : '',
         automargin: true,
-        showticklabels: false
+        showticklabels: isMobile
       },
       yaxis: {
         title: isMobile ? '' : 'Porcentaje',
@@ -161,4 +161,8 @@
   });
 </script>
 
-<div bind:this={plotContainer} class="w-full max-w-screen-xl mx-auto" style="height:500px;"></div>
+<div
+    bind:this={plotContainer}
+    class="w-full max-w-screen-xl mx-auto"
+    style="height:600px;"
+></div>

@@ -172,4 +172,8 @@ Diferencia entre 1º y 2º: ${d.diff_between_1_and_2.toFixed(2)}%`;
   onDestroy(() => { if (cleanupFn) cleanupFn(); });
 </script>
 
-<div bind:this={plotContainer} class="w-full max-w-screen-xl mx-auto" style="height:900px;"></div>
+<div
+    bind:this={plotContainer}
+    class="w-full max-w-screen-xl mx-auto"
+    style="height:900px;"
+></div>
