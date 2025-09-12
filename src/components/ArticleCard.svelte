@@ -11,7 +11,7 @@
     }
 </script>
 
-<div class="card bg-neutral w-70 shadow-lg">
+<div class="card bg-neutral w-75 shadow-lg">
     <a
         href={`/articulo/${metadata.slug}`}
         on:click={handleClick}
@@ -28,7 +28,7 @@
                 {metadata.date.toLocaleDateString('es-AR', { day: '2-digit', month: 'short', year: 'numeric' })}
             </div>
         </figure>
-        <div class="card-body h-60">
+        <div class="card-body h-65">
             <h2 class="card-title">
                 {metadata.title}
                 {#if metadata.is_new}
