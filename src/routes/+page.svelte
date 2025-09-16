@@ -14,6 +14,23 @@
     });
 </script>
 
+<svelte:head>
+    <!-- Open Graph -->
+    <meta property="og:url" content="https://la-milanesa.vercel.app/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="La Verdad de La Milanesa">
+    <meta property="og:description" content="Sean bienvenidos a este espacio, donde los datos se convierten en gráficos e historias para intentar entender la realidad.">
+    <meta property="og:image" content={`https://la-milanesa.vercel.app$/favicons/favicon.png`}>
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="la-milanesa.vercel.app">
+    <meta property="twitter:url" content="https://la-milanesa.vercel.app/">
+    <meta name="twitter:title" content="La Verdad de La Milanesa">
+    <meta name="twitter:description" content="Sean bienvenidos a este espacio, donde los datos se convierten en gráficos e historias para intentar entender la realidad.">
+    <meta property="og:image" content={`https://la-milanesa.vercel.app$/logos/dark-logo-transparency.png`}>
+</svelte:head>
+
 <div class="hero bg-base-200 min-h-screen">
     <div class="hero-content flex-col lg:flex-row items-center text-center lg:text-left">
         {#if mounted}

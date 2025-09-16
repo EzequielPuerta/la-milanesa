@@ -1,9 +1,9 @@
-<script>
+<script lang="ts">
 	import { Email, Reddit, LinkedIn, Telegram, WhatsApp, Facebook, X } from 'svelte-share-buttons-component';
 
-	const url = 'https://la-milanesa.vercel.app';
-	const title = 'La Verdad de La Milanesa';
-	const desc = 'Sean bienvenidos a este espacio, donde publicaremos diferentes artículos de actualidad en clave de datos.';
+    export let url: string;
+    export let title: string;
+    export let desc: string;
 </script>
 
 <div>
