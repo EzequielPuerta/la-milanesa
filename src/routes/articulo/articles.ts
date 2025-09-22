@@ -11,11 +11,12 @@ export const articles: ArticleMetadata[] = [
         abstract: "Uno por uno, los 17 candidatos en las legislativas de CABA.",
         tags: ["Política", "Scrollytelling"],
         photo: "/images/covers/candidatos-caba-2025.png",
-        credit: "",
-        alt_photo: "Candidatos CABA 2025",
+        credit_tooltip: "",
+        credit_link: "",
+        alt_photo: "Los 17 candidatos a las elecciones legislativas de CABA durante el debate de la Ciudad.",
         hero_photo: "/images/covers/candidatos-caba-2025.png",
-        hero_credit: "",
-        caption: "Los 17 candidatos a las elecciones legislativas de CABA durante el debate de la Ciudad."
+        hero_credit_tooltip: "",
+        hero_credit_link: "",
     },
     {
         slug: 'simulador-legislativas-caba-2025',
@@ -26,11 +27,12 @@ export const articles: ArticleMetadata[] = [
         abstract: "Los distintos escenarios posibles según las últimas encuestas.",
         tags: ["Política", "Elecciones", "Simulador"],
         photo: "/images/covers/legislatura-caba-2025.png",
-        credit: "",
+        credit_tooltip: "Agencia Na",
+        credit_link: "https://www.perfil.com/noticias/politica/elecciones-en-caba-2025-que-funciones-tiene-la-legislatura-portena-y-cual-es-su-presupuesto.phtml",
         alt_photo: "Legislatura porteña",
         hero_photo: "/images/heros/simulador-legislativas-caba-2025.jpg",
-        hero_credit: "",
-        caption: ""
+        hero_credit_tooltip: "Legislatura de la Ciudad Autónoma de Buenos Aires",
+        hero_credit_link: "https://commons.wikimedia.org/wiki/File:Legislatura_de_la_Ciudad_de_Buenos_Aires_-_Recinto_de_Sesiones_(4).jpg",
     },
     {
         slug: 'hacerle-el-juego-a-la-derecha',
@@ -41,11 +43,12 @@ export const articles: ArticleMetadata[] = [
         abstract: "Todos se acusan, pero realmente... ¿Quién le hace el juego a la derecha?",
         tags: ["Política"],
         photo: "/images/covers/revista-barcelona-juego-a-la-derecha.png",
-        credit: "",
+        credit_tooltip: "",
+        credit_link: "",
         alt_photo: "Tapa de la Revista Barcelona N° 185 de abril 2010 (https://digital.revisbarcelona.com/library/publication/barcelona-185)",
         hero_photo: "/images/covers/revista-barcelona-juego-a-la-derecha.png",
-        hero_credit: "",
-        caption: "Tapa de la Revista Barcelona N° 185 de abril 2010"
+        hero_credit_tooltip: "",
+        hero_credit_link: "",
     },
     {
         slug: 'antiperonismo-y-bahia-blanca',
@@ -56,10 +59,11 @@ export const articles: ArticleMetadata[] = [
         abstract: "Una radiografía de las últimas elecciones de medio término con foco en el municipio bonaerense.",
         tags: ["Política", "Elecciones", "SIG"],
         photo: "/images/covers/antiperonismo-y-bahia-blanca.png",
-        credit: "Por Juan Corral (Fotógrafo, Subdirección de Prensa y Contenidos Públicos del Municipio de Bahía Blanca) - Municipio de Bahía Blanca, CC BY 2.5 ar, https://commons.wikimedia.org/w/index.php?curid=101247573",
+        credit_tooltip: "Juan Corral",
+        credit_link: "https://commons.wikimedia.org/w/index.php?curid=101247573",
         alt_photo: "Legislatura de la Provincia de Buenos Aires",
         hero_photo: "/images/heros/antiperonismo-y-bahia-blanca.jpg",
-        hero_credit: "Por Juan Corral (Fotógrafo, Subdirección de Prensa y Contenidos Públicos del Municipio de Bahía Blanca) - Municipio de Bahía Blanca, CC BY 2.5 ar, https://commons.wikimedia.org/w/index.php?curid=101171861",
-        caption: ""
+        hero_credit_tooltip: "Juan Corral",
+        hero_credit_link: "https://commons.wikimedia.org/w/index.php?curid=101171861",
     },
 ];

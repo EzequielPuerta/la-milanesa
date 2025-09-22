@@ -1,7 +1,8 @@
 <script lang="ts">
   import Article from '$components/Article.svelte';
   import { articles } from '../articles';
-
+  import HighlightedParagraph from '$components/HighlightedParagraph.svelte';
+  
   import LinesPlot from './components/LinesPlot.svelte';
   import VotesBoxPlot from './components/VotesBoxPlot.svelte';
   import VotesTreemapPlot from './components/VotesTreemapPlot.svelte';
@@ -22,9 +23,9 @@
 
 {#if metadata}
     <Article {metadata}>
-        <p class="px-10 pt-16 pb-4">
-            <em>Disclaimer:</em> Si bien votar en determinada escuela no implica vivir dentro del mismo radio censal o próximo al mismo, en el presente artículo haremos la suposición que al menos para la gran mayoría de los casos es efectivamente así.
-        </p>
+        <HighlightedParagraph title="Disclaimer:" color="info">
+            Si bien votar en determinada escuela no implica vivir dentro del mismo radio censal o próximo al mismo, en el presente artículo haremos la suposición que al menos para la gran mayoría de los casos es efectivamente así.
+        </HighlightedParagraph>
 
         <p class="px-10 py-4">
             En los últimos días, después de las elecciones legislativas en la provincia de Buenos Aires, Bahía Blanca quedó en el centro de la conversación. No tanto por la magnitud de sus votos dentro del padrón provincial (a pesar de ser el partido mas importante de la Sexta Sección Electoral de PBA), sino porque fue uno de los pocos municipios donde ganó <em style="color: #68508b">La Libertad Avanza</em> y perdió el oficialismo provincial, <em style="color: #00b4f0">Fuerza Patria</em>, la alianza peronista encabezada por Kicillof. En redes sociales, sobre todo en Twitter, no tardaron en aparecer los comentarios: que los bahienses “se merecen” lo que les pase, que “son todos antiperonistas”, que no es lógico que voten a Milei cuando han sufrido en carne propia dos tormentas devastadoras en los últimos años, con víctimas fatales, barrios inundados, incontables pérdidas materiales y el Presidente no quiera brindarles una respuesta a la altura de la situación ni por cambio climático ni por la falta de obras públicas. Ese contraste, entre la experiencia reciente del desastre y el apoyo a un gobierno que niega o minimiza esos problemas, fue el terreno ideal para que germinen las preguntas: ¿es el bahiense promedio tan antiperonista como se ha instalado?, ¿realmente todo Bahía Blanca vota igual?
