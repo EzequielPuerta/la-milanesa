@@ -1,6 +1,6 @@
 # La Milanesa
 
-Este repositorio contiene el frontend en **SvelteKit** y el backend en **Django DRF**.  
+Este repositorio contiene el frontend en **SvelteKit** y el backend en **Django DRF**.
 
 Estructura principal:
 
@@ -57,6 +57,7 @@ El backend está en la carpeta backend/ y usa un entorno virtual .venv y uv para
 cd backend
 python -m venv .venv      # si no existe
 uv activate .venv
+python -m ensurepip --upgrade
 ```
 
 ### 2. Instalar dependencias
