@@ -5,7 +5,7 @@ VENV := .venv
 PYTHON := $(VENV)/bin/python3
 PIP := $(VENV)/bin/pip3
 MANAGE := $(PYTHON) manage.py
-REQS := requirements.txt
+REQS := ../requirements.txt
 
 # Create virtual environment
 venv:
