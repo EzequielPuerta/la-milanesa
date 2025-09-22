@@ -11,14 +11,16 @@ repos:
     rev: 7.1.1
     hooks:
     -   id: flake8
+        args: ["--config=backend/setup.cfg"]
 -   repo: https://github.com/psf/black
     rev: 24.10.0
     hooks:
-      - id: black
+    -   id: black
 -   repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.13.0
     hooks:
-        - id: mypy
+    -   id: mypy
+        args: ["--config=backend/setup.cfg"]
 -   repo: https://github.com/PyCQA/isort
     rev: 5.13.2
     hooks:
@@ -26,7 +28,7 @@ repos:
         args: ["--resolve-all-configs"]
 -   repo: local
     hooks:
-      - id: sync-reqs
+    -   id: sync-reqs
         name: Sync requirements
         entry: bash -c "cd backend && make sync-reqs"
         language: system
