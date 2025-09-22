@@ -1,7 +1,7 @@
 <script lang="ts">
     import Article from '$components/Article.svelte';
     import { articles } from '../articles';
-    
+    import HighlightedParagraph from '$components/HighlightedParagraph.svelte';
     import katex from 'katex';
     import { onMount } from 'svelte';
     import ChamberDiagram from './components/ChamberDiagram.svelte';
@@ -101,9 +101,9 @@
 
 {#if metadata}
     <Article {metadata}>
-        <p class="px-10 pt-16 pb-4">
-            <em>Disclaimer:</em> Si bien el presente artículo está pensado <em>mobile first</em> y deberías poder ver su contenido sin problemas, la magnitud y complejidad de los diagramas hacen que se aprecie mucho mejor en pantallas de mayor tamaño. Dicho esto, si estas desde un celular, tu paciencia será apreciada 😁.
-        </p>
+        <HighlightedParagraph title="Disclaimer:" color="info">
+            Si bien el presente artículo está pensado <em>mobile first</em> y deberías poder ver su contenido sin problemas, la magnitud y complejidad de los diagramas hacen que se aprecie mucho mejor en pantallas de mayor tamaño. Dicho esto, si estas desde un celular, tu paciencia será apreciada 😁.
+        </HighlightedParagraph>
 
         <p class="px-10 py-4">
             Si bien hace ya cerca de 12 años que vivo en la Ciudad Autónoma de Buenos Aires, nunca me había hecho el Documento Nacional de Identidad (DNI) con alguna de las tantas direcciones que me permitieron habitar "la Capital". Eso cambió en algún momento de 2024: finalmente hice el trámite y obtuve un DNI con domicilio porteño, sin imaginar todas las consecuencias impensadas que eso iba a traer. 

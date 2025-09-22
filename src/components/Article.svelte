@@ -1,6 +1,7 @@
 <script lang="ts">
     import SocialButtons from '$components/SocialButtons.svelte';
     import type { ArticleMetadata } from './types'
+    import PhotoCredit from './PhotoCredit.svelte';
 
     export let metadata: ArticleMetadata;
 
@@ -30,7 +31,7 @@
 
 {#if metadata}
     <div
-        class="hero min-h-screen"
+        class="hero min-h-screen relative"
         style={`background-image: url(${metadata.hero_photo})`}
     >
         <div class="hero-overlay"></div>
@@ -51,6 +52,12 @@
                     {/each}
                 </div>
             </div>
+        </div>
+        <div class="absolute bottom-6 right-6 group">
+            <PhotoCredit
+                tooltip={metadata.hero_credit_tooltip}
+                link={metadata.hero_credit_link}
+            />
         </div>
     </div>
 
