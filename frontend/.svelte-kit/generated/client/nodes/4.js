@@ -1,0 +1,1 @@
+export { default as component } from "../../../../src/routes/articulo/antiperonismo-y-bahia-blanca/+page.svelte";
