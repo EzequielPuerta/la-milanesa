@@ -33,3 +33,10 @@ repos:
         entry: bash -c "cd backend && make sync-reqs"
         language: system
         always_run: true
+-   repo: local
+    hooks:
+    -   id: collect-static
+        name: Collect staticfiles
+        entry: bash -c "cd backend && make collect-static"
+        language: system
+        always_run: true

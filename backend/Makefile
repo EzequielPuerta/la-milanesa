@@ -21,6 +21,10 @@ sync-reqs:
 	$(PIP) freeze > $(REQS)
 	@echo "requirements.txt updated"
 
+# Collect static files
+collect-static:
+	$(MANAGE) collectstatic --noinput
+
 # Migrate
 migrate:
 	$(MANAGE) migrate
