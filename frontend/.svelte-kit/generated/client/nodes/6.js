@@ -1,1 +1,0 @@
-export { default as component } from "../../../../src/routes/articulo/simulador-legislativas-caba-2025/+page.svelte";
