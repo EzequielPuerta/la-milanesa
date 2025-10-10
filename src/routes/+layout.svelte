@@ -3,7 +3,7 @@
     import 'katex/dist/katex.min.css';
 	import { onMount } from 'svelte';
     import { logoSmall } from '$lib/stores/logoVariants';
-    import { injectAnalytics } from '@vercel/analytics/sveltekit'
+    import { injectAnalytics } from '@vercel/analytics/sveltekit';
     injectAnalytics();
 
     let mounted = false;

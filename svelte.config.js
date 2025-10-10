@@ -10,6 +10,7 @@ const config = {
 
 	kit: {
         alias: {
+            $lib: 'src/lib',
             $components: path.resolve('./src/components'),
         },
 		// adapter-auto only supports some environments, see https://svelte.dev/docs/kit/adapter-auto for a list.
