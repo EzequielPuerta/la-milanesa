@@ -1,16 +1,20 @@
 <script lang="ts">
     import { onMount } from 'svelte';
-    import { articles } from './articulo/articles';
     import ArticleCard from '../components/ArticleCard.svelte';
     import { logoLarge } from '$lib/stores/logoVariants';
-    import type { ArticleMetadata } from '../components/types.js';
+    import type { ArticleMetadata } from "$coretypes/articleMetadata";
 
     let mounted: boolean = false;
-    let sortedArticles: ArticleMetadata[] = articles;
+    let articles: ArticleMetadata[] = [];
+
+    const loadArticles = async () => {
+		const res = await fetch('/api/articles');
+		articles = await res.json();
+	};
+
     onMount(() => {
         mounted = true;
-
-        sortedArticles = sortedArticles.filter(a => a.is_available).sort((a, b) => b.date.getTime() - a.date.getTime());
+        loadArticles();
     });
 </script>
 
@@ -61,8 +65,8 @@
 <div class="max-w-screen-lg mx-auto p-8">
     <h1 class="text-center text-3xl font-bold mb-6">Artículos</h1>
     <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center">
-        {#if sortedArticles}
-            {#each sortedArticles as metadata}
+        {#if articles}
+            {#each articles as metadata}
                 {#if metadata.is_available}
                     <li>
                         <ArticleCard {metadata} />

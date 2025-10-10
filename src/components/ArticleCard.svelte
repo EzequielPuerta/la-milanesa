@@ -1,7 +1,7 @@
 <script lang="ts">
     import { goto } from '$app/navigation';
     import PhotoCredit from './PhotoCredit.svelte';
-    import type { ArticleMetadata } from './types'
+    import type { ArticleMetadata } from "$coretypes/articleMetadata";
     
     export let metadata: ArticleMetadata;
 </script>
@@ -25,7 +25,7 @@
             class="w-full h-auto"
         />
         <div class="absolute top-2 right-2 bg-black bg-opacity-90 text-white text-xs px-2 py-1 rounded">
-            {metadata.date.toLocaleDateString('es-AR', { day: '2-digit', month: 'short', year: 'numeric' })}
+            {new Date(metadata.date).toLocaleDateString('es-AR', { day: '2-digit', month: 'short', year: 'numeric' })}
         </div>
         <div class="absolute bottom-2 right-2 group">
             <div class="absolute bottom-0 right-0 group">
