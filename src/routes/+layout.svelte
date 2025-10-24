@@ -38,9 +38,17 @@
         <slot />
     </div>
 
-    <footer class="footer sm:footer-horizontal footer-center bg-base-300 text-base-content p-4 z-100">
-        <aside>
-            <p>Copyleft 🄯 {new Date().getFullYear()} - Todos los derechos sin reservar</p>
-        </aside>
+    <footer class="footer sm:footer-horizontal bg-base-300 text-base-content p-10">
+        <nav>
+            <h6 class="footer-title">Nosotros</h6>
+            <a class="link link-hover">Acerca de</a>
+            <a class="link link-hover">Contacto</a>
+        </nav>
+        <nav>
+            <h6 class="footer-title">Social</h6>
+            <div class="grid grid-flow-col gap-4">
+                <a href='https://cafecito.app/holalamilanesa' rel='noopener' target='_blank'><img srcset='https://cdn.cafecito.app/imgs/buttons/button_4.png 1x, https://cdn.cafecito.app/imgs/buttons/button_4_2x.png 2x, https://cdn.cafecito.app/imgs/buttons/button_4_3.75x.png 3.75x' src='https://cdn.cafecito.app/imgs/buttons/button_4.png' alt='Invitame un café en cafecito.app' /></a>
+            </div>
+        </nav>
     </footer>
 </main>
