@@ -2,7 +2,7 @@
   import Article from '$components/Article.svelte';
   import HighlightedParagraph from '$components/HighlightedParagraph.svelte';
   
-  import LinesPlot from './components/LinesPlot.svelte';
+  import ElectionResultsByParty from './components/ElectionResultsByParty.svelte';
   import VotesBoxPlot from './components/VotesBoxPlot.svelte';
   import VotesTreemapPlot from './components/VotesTreemapPlot.svelte';
   import StackedBarPlot from './components/StackedBarPlot.svelte';
@@ -30,7 +30,7 @@
         Para empezar a responderlas, un buen punto de partida podría ser mirar el recorrido electoral reciente. Armemos una línea de tiempo con las elecciones mas recientes. Lo que se observa es que la preferencia por Milei no apareció de golpe: ya venía consolidándose desde hace tiempo. Y si sumamos que desde 2015 hasta 2023 la ciudad tuvo un intendente del prácticamente extinto <em style="color: #facc15">PRO</em>, la profundización hacia la derecha se entiende mejor.
     </p>
 
-    <LinesPlot
+    <ElectionResultsByParty
         csvUrl={eleccionesPreviasUrl}
         title={'Evolución de elecciones previas'}
     />

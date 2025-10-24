@@ -1,7 +1,7 @@
 import type { RequestHandler } from '@sveltejs/kit';
 import { json } from '@sveltejs/kit';
 import { MongoClient } from 'mongodb';
-import { MONGO_URI } from '$env/static/private';
+import { MONGO_URI, MONGO_DB } from '$env/static/private';
 import type { ArticleMetadata } from '$coretypes/articleMetadata';
 
 if (!MONGO_URI) {
@@ -13,7 +13,7 @@ const client = new MongoClient(MONGO_URI);
 const list_articles: RequestHandler = async () => {
 	try {
 		await client.connect();
-		const db = client.db('la-milanesa');
+		const db = client.db(MONGO_DB);
 		const collection = db.collection<ArticleMetadata>('articles-metadata');
 
 		const articles = await collection

@@ -47,10 +47,10 @@
         <div>
             <h1 class="sm:text-5xl py-6">Datos, gráficos e historias para intentar entender la realidad.</h1>
             <p class="py-2">
-                En un mundo saturado de opiniones y algoritmos, donde todos proclaman tener la <em>posta</em> y cualquiera puede gritar una “verdad” en 280 caracteres, queremos frenar la pelota. Este <em>blog</em> nace con el deseo de pensar, dudar, analizar y contar historias desde los datos.
+                En un mundo saturado de opiniones, donde todos proclaman tener la <em>posta</em> y cualquiera puede gritar una “verdad” en 280 caracteres, queremos frenar la pelota. Este <em>blog</em> nace con el deseo de pensar, dudar, analizar y contar historias desde los datos.
             </p>
             <p class="py-2">
-                No tenemos verdades absolutas ni queremos tenerlas, pero sí preguntas (y muchas) que merecen algo más que un tuit. Acá vas a encontrar gráficos, contexto, números y algo de filosofía de sobremesa acerca de tópicos de actualidad.
+                No tenemos verdades absolutas ni queremos tenerlas, pero sí preguntas (y muchas) que merecen algo más que un <em>tuit</em>. Acá vas a encontrar gráficos, contexto, números y algo de filosofía de sobremesa acerca de tópicos de actualidad.
             </p>
             <p class="py-2">
                 Porque creemos que los datos no hablan solos:

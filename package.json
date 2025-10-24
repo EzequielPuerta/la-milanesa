@@ -54,6 +54,8 @@
 		"mongodb": "^6.20.0",
 		"papaparse": "^5.5.3",
 		"plotly.js-dist": "^3.1.0",
-		"svelte-share-buttons-component": "^3.0.0"
+		"svelte-share-buttons-component": "^3.0.0",
+		"tsparticles-all": "^2.12.0",
+		"tsparticles-engine": "^2.12.0"
 	}
 }
