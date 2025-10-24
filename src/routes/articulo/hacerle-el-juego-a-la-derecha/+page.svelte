@@ -40,7 +40,9 @@
         Por lo tanto esa es la clave, obtener el nombre del partido con el cuál se presentaron a las elecciones y mediante el cuál ganaron su lugar en el Congreso. Esta información la podemos obtener de la web de la <a class="text-primary" href="https://www.electoral.gob.ar/nuevo/index.php" target="_blank">Cámara Nacional Electoral</a>. Allí conoceremos a todos los candidatos y podremos saber en que lista electoral figuraron.
     </p>
 
-    <ParliamentaryBlocsAndPartiesTable />
+    <div class="mx-30">
+        <ParliamentaryBlocsAndPartiesTable />
+    </div>
 
     <p class="px-10 pt-16 pb-4">
         Ya conociendo el partido político mediante el cúal accedió a su banca cada legislador, podemos calcular cual es el voto mayoritario por cada partido y para cada votación, en particular el del oficialismo. Sabiendo esto, podemos comparar la similitud de cualquier legislador frente a la mayoría de cualquier partido. Y a su vez, esto nos permite poder calcular la similitud entre partidos, utilizando la mayoría de cada uno.
@@ -171,7 +173,7 @@
     />
 
     <HighlightedParagraph title="Bonus Track:" color="success">
-        En el siguiente diagrama vemos de manera bien gráfica la similitud entre legisladores. Las líneas (ó aristas) que conectan a los legisladores (ó nodos) representan el nivel de similitud. A mayor similitud, mas cortos los vínculos y viceversa. Por lo tanto los legisladores que votan muy similar forman agrupamientos llamados <em>clústers</em>, dado que sus líneas son muy cortas. Es interesante ver como los distintos legisladores se van reorganizando en cuanto a sus similitudes conforme pasa el tiempo. Para poder observar las relaciones en otros intervalos de tiempo simplemente seleccione la fecha deseada.
+        En el siguiente diagrama (recomendable verlo en su versión <em>desktop</em>) vemos de manera bien gráfica la similitud entre legisladores. Las líneas (ó aristas) que conectan a los legisladores (ó nodos) representan el nivel de similitud. A mayor similitud, mas cortos los vínculos y viceversa. Por lo tanto los legisladores que votan muy similar forman agrupamientos llamados <em>clústers</em>, dado que sus líneas son muy cortas. Es interesante ver como los distintos legisladores se van reorganizando en cuanto a sus similitudes conforme pasa el tiempo. Para poder observar las relaciones en otros intervalos de tiempo simplemente seleccione la fecha deseada.
     </HighlightedParagraph>
 
     <TimelineGraph />
