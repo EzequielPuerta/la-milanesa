@@ -197,8 +197,12 @@
 >
   {#if loadingBallots}
     <div class="h-screen flex items-center justify-center">
-      <div class="radial-progress" style="--value:70;" aria-valuenow="70" role="progressbar">
-      </div>
+    <div 
+        class="radial-progress w-32 h-32 animate-spin" 
+        style="--value:70;" 
+        aria-valuenow="70" 
+        role="progressbar">
+    </div>
     </div>
   {:else}
     {#if !completed}
