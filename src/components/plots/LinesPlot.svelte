@@ -136,9 +136,13 @@
   });
 </script>
 
-<div
-  bind:this={plotContainer}
-  class="w-full max-w-screen-xl mx-auto"
-  style="height:600px;"
->
+<div class="overflow-x-auto">
+    <div class="min-w-[800px]">
+        <div
+            bind:this={plotContainer}
+            class="w-full max-w-screen-xl mx-auto"
+            style="height:600px;"
+        >
+        </div>
+    </div>
 </div>

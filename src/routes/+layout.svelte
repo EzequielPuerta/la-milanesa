@@ -4,6 +4,7 @@
 	import { onMount } from 'svelte';
     import { logoSmall } from '$lib/stores/logoVariants';
     import { injectAnalytics } from '@vercel/analytics/sveltekit';
+    import { Instagram, Twitter, Mail } from 'lucide-svelte';
     injectAnalytics();
 
     let mounted = false;
@@ -46,8 +47,41 @@
         </nav>
         <nav>
             <h6 class="footer-title">Social</h6>
-            <div class="grid grid-flow-col gap-4">
-                <a href='https://cafecito.app/holalamilanesa' rel='noopener' target='_blank'><img srcset='https://cdn.cafecito.app/imgs/buttons/button_4.png 1x, https://cdn.cafecito.app/imgs/buttons/button_4_2x.png 2x, https://cdn.cafecito.app/imgs/buttons/button_4_3.75x.png 3.75x' src='https://cdn.cafecito.app/imgs/buttons/button_4.png' alt='Invitame un café en cafecito.app' /></a>
+            <div class="grid grid-flow-col gap-4 items-center">
+				<a
+					href="https://www.instagram.com/la.milanesa.ok/"
+					target="_blank"
+					rel="noopener"
+					class="hover:text-pink-400 transition-colors"
+					aria-label="Instagram"
+				>
+					<Instagram size="22" />
+				</a>
+
+				<a
+					href="https://x.com/LaMilanesaOk"
+					target="_blank"
+					rel="noopener"
+					class="hover:text-sky-400 transition-colors"
+					aria-label="Twitter"
+				>
+					<Twitter size="22" />
+				</a>
+
+                <a
+                    href="mailto:hola.la.milanesa@gmail.com"
+                    class="flex items-center gap-2 hover:text-primary"
+                >
+                    <Mail class="w-5 h-5" />
+                </a>
+
+                <a
+                    href='https://cafecito.app/holalamilanesa'
+                    rel='noopener'
+                    target='_blank'
+                >
+                    <img srcset='https://cdn.cafecito.app/imgs/buttons/button_4.png 1x, https://cdn.cafecito.app/imgs/buttons/button_4_2x.png 2x, https://cdn.cafecito.app/imgs/buttons/button_4_3.75x.png 3.75x' src='https://cdn.cafecito.app/imgs/buttons/button_4.png' alt='Invitame un café en cafecito.app' />
+                </a>
             </div>
         </nav>
     </footer>
