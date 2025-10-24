@@ -1,0 +1,15 @@
+export const SEATS_BY_PARTY: Record<string, Number> = {
+    'Unión Por La Patria': 108,
+    'Juntos Por El Cambio': 92,
+    'La Libertad Avanza': 37,
+    'Hacemos Por Nuestro Pais': 7,
+    'Frente De Izquierda Y De Trabajadores-Unidad': 5,
+    'Somos Energia Para Renovar Santa Cruz - Ser': 1,
+    'Juntos Somos Rio Negro': 1,
+    'Frente Amplio Progresista': 1,
+    'Somos Fueguinos': 1,
+    'Alianza Por Santa Cruz': 1,
+    'Movimiento Popular Neuquino': 1,
+    'Republicanos Unidos': 1,
+    'Alianza Fuerza San Luis': 1,
+};
