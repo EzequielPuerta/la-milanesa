@@ -6,7 +6,6 @@
   import { surveyQuestions } from '../surveyQuestions';
   import { PARTIES_BY_LEGISLATORS } from '../partiesByLegislators';
   import type { CastVote, Ballot, Vote, LegislatorMatch } from "../types";
-  import ParticlesBackground from '$components/ParticlesBackground.svelte';
 
   let isClient = false;
   let ballotsById: Record<string, Ballot> = {};
@@ -206,7 +205,6 @@
     </div>
   {:else}
     {#if !completed}
-        <ParticlesBackground />
         <progress
             class="progress progress-primary fixed bottom-0 left-0 w-full h-2 z-50"
             value={currentQuestion+1}
