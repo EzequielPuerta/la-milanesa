@@ -1,0 +1,8 @@
+{
+  "crons": [
+    {
+      "path": "/api/50-veces-nunca-mas/tweets/sync",
+      "schedule": "30 15 * * *"
+    }
+  ]
+}
